@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b15">
+  <meta name="description" content="Herbs & Harmony — Ayurveda, wellness and cosmetology.">
+  <title>Herbs & Harmony | Beauty, Balance & Beyond</title>
+  <link rel="preload" href="assets/botanical-bg.svg" as="image" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- PRELOADER: shown while the page prepares -->
+  <div class="preloader" id="preloader" role="status" aria-label="Loading Herbs and Harmony website">
+    <div class="preloader__backdrop" aria-hidden="true"></div>
+    <div class="preloader__glow preloader__glow--one" aria-hidden="true"></div>
+    <div class="preloader__glow preloader__glow--two" aria-hidden="true"></div>
+    <div class="preloader__edge-leaves preloader__edge-leaves--left" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="preloader__edge-leaves preloader__edge-leaves--right" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+
+    <button class="preloader__skip" id="skipIntro" type="button" aria-label="Skip intro animation">Skip intro <span aria-hidden="true">↗</span></button>
+
+    <div class="intro" aria-hidden="true">
+      <svg class="intro__orbit" viewBox="0 0 500 500" focusable="false">
+        <defs>
+          <linearGradient id="orbitGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f7e7a0" />
+            <stop offset="36%" stop-color="#bd9955" />
+            <stop offset="63%" stop-color="#fff4bd" />
+            <stop offset="100%" stop-color="#94713c" />
+          </linearGradient>
+          <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="3.5" result="blur" />
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <circle class="intro__orbit-ghost" cx="250" cy="250" r="194" />
+        <circle class="intro__orbit-main" cx="250" cy="250" r="194" pathLength="1000" />
+        <circle class="intro__orbit-inner" cx="250" cy="250" r="178" pathLength="1000" />
+        <path class="intro__orbit-spark" d="M 403 103 A 194 194 0 0 1 443 255" />
+      </svg>
+
+      <div class="intro__leaf intro__leaf--top" aria-hidden="true">
+        <svg viewBox="0 0 100 58"><path d="M4 50C24 2 69 0 96 5 81 37 42 62 4 50Z"/><path class="leaf-vein" d="M8 50 87 9M37 35 31 17M54 27 56 11M69 20 79 14"/></svg>
+      </div>
+      <div class="intro__leaf intro__leaf--right" aria-hidden="true">
+        <svg viewBox="0 0 100 58"><path d="M4 50C24 2 69 0 96 5 81 37 42 62 4 50Z"/><path class="leaf-vein" d="M8 50 87 9M37 35 31 17M54 27 56 11M69 20 79 14"/></svg>
+      </div>
+      <div class="intro__leaf intro__leaf--left" aria-hidden="true">
+        <svg viewBox="0 0 100 58"><path d="M4 50C24 2 69 0 96 5 81 37 42 62 4 50Z"/><path class="leaf-vein" d="M8 50 87 9M37 35 31 17M54 27 56 11M69 20 79 14"/></svg>
+      </div>
+      <div class="intro__leaf intro__leaf--bottom" aria-hidden="true">
+        <svg viewBox="0 0 100 58"><path d="M4 50C24 2 69 0 96 5 81 37 42 62 4 50Z"/><path class="leaf-vein" d="M8 50 87 9M37 35 31 17M54 27 56 11M69 20 79 14"/></svg>
+      </div>
+      <span class="intro__particle intro__particle--one"></span>
+      <span class="intro__particle intro__particle--two"></span>
+      <span class="intro__particle intro__particle--three"></span>
+      <span class="intro__particle intro__particle--four"></span>
+
+      <div class="intro__content">
+        <div class="brand-mark" aria-label="Herbs and Harmony logo mark">
+          <svg viewBox="0 0 180 94" focusable="false">
+            <path class="brand-mark__white" d="M20 23C41 67 83 73 132 20 108 24 96 19 83 31 61 51 43 47 20 23Z" />
+            <path class="brand-mark__gold" d="M18 76C48 39 76 34 101 52 115 62 126 70 143 75 119 78 103 67 88 59 65 47 45 64 18 76Z" />
+          </svg>
+        </div>
+        <p class="intro__brand">Herbs <span>&amp;</span><br>Harmony</p>
+        <p class="intro__descriptor">AYURVEDA <i>•</i> WELLNESS <i>•</i> COSMETOLOGY</p>
+        <div class="intro__progress" role="progressbar" aria-label="Website loading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+          <span class="intro__progress-track"><span class="intro__progress-fill" id="progressFill"></span></span>
+          <span class="intro__percentage" id="progressText">0%</span>
+        </div>
+        <p class="intro__tagline">“Beauty, Balance &amp; Beyond”</p>
+      </div>
+    </div>
+    <p class="preloader__loading-note" id="loadingNote">Preparing your moment of calm</p>
+  </div>
+
+  <!-- DEMO HOMEPAGE: replace this section with your real website content -->
+  <main class="site" id="siteContent">
+    <header class="site-header">
+      <a class="site-brand" href="#home" aria-label="Herbs and Harmony home">
+        <span class="site-brand__symbol" aria-hidden="true">✦</span>
+        <span>Herbs <em>&amp;</em> Harmony</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#philosophy">Our philosophy</a>
+        <a href="#rituals">Rituals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="site-header__cta" href="#contact">Book a consultation <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero__image" aria-hidden="true">
+        <div class="hero__sun"></div>
+        <div class="hero__plant hero__plant--one"></div>
+        <div class="hero__plant hero__plant--two"></div>
+        <div class="hero__plant hero__plant--three"></div>
+      </div>
+      <div class="hero__content">
+        <p class="eyebrow"><span></span> A more natural kind of radiance</p>
+        <h1>Come back to<br><em>your nature.</em></h1>
+        <p class="hero__copy">Thoughtful wellness and botanical beauty rituals that bring the body, mind and spirit into harmony.</p>
+        <div class="hero__actions">
+          <a class="button button--gold" href="#rituals">Explore our rituals <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#philosophy">Discover our philosophy <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero__caption"><span>01 / 03</span><span>Rooted in nature. Made for you.</span></div>
+      <div class="hero__scroll" aria-hidden="true"><span></span> Scroll to discover</div>
+    </section>
+
+    <section class="philosophy section" id="philosophy">
+      <p class="eyebrow"><span></span> The Herbs &amp; Harmony approach</p>
+      <h2>Wellbeing is not a destination.<br><em>It is a way of returning.</em></h2>
+      <p class="section-copy">Inspired by the wisdom of Ayurveda and the quiet intelligence of nature, we create considered experiences to help you feel balanced, nourished and beautifully yourself.</p>
+    </section>
+
+    <section class="rituals section" id="rituals">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> A little more harmony</p><h2>Rituals for <em>every you.</em></h2></div><p>Gentle, grounded care—guided by nature, tailored to you.</p></div>
+      <div class="ritual-grid">
+        <article class="ritual-card ritual-card--one"><span class="ritual-card__number">01</span><div><p>01 / BALANCE</p><h3>Ayurvedic wellness</h3><a href="#contact" aria-label="Learn about Ayurvedic wellness">Discover <span>↗</span></a></div></article>
+        <article class="ritual-card ritual-card--two"><span class="ritual-card__number">02</span><div><p>02 / RESTORE</p><h3>Botanical skincare</h3><a href="#contact" aria-label="Learn about botanical skincare">Discover <span>↗</span></a></div></article>
+        <article class="ritual-card ritual-card--three"><span class="ritual-card__number">03</span><div><p>03 / RENEW</p><h3>Mindful beauty</h3><a href="#contact" aria-label="Learn about mindful beauty">Discover <span>↗</span></a></div></article>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="site-footer__inner"><p class="eyebrow"><span></span> Your journey starts here</p><h2>Find your natural <em>harmony.</em></h2><a class="button button--gold" href="mailto:hello@herbsandharmony.example">Begin a conversation <span aria-hidden="true">↗</span></a><p class="site-footer__fine">HERBS &amp; HARMONY <span>•</span> BEAUTY, BALANCE &amp; BEYOND</p></div>
+    </footer>
+  </main>
+</body>
+</html>
